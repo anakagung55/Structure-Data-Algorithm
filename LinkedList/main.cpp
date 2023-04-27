@@ -26,25 +26,25 @@ int main(int argc, char** argv) {
 	List1.printAll();
 	//insertTotailValue
 	List1.insertToTail(54);
-    List1.insertToTail(65);
+    	List1.insertToTail(65);
     
-    List1.printAll();
-    //insertAfterValue
-    List1.insertAfter(98, 20);
-    List1.printAll();
+   	List1.printAll();
+    	//insertAfterValue
+    	List1.insertAfter(98, 20);
+    	List1.printAll();
     
-    //deleteFromHeadValue
-    List1.deleteFromHead();
-    List1.printAll();
+    	//deleteFromHeadValue
+    	List1.deleteFromHead();
+    	List1.printAll();
 
-    //deleteFromTailValue
-    List1.deleteFromTail();
-    List1.printAll();
+    	//deleteFromTailValue
+    	List1.deleteFromTail();
+    	List1.printAll();
 
-    //deleteByValue
-    List1.deleteByValue(98);
-    List1.deleteByValue(54);
-    List1.printAll();
+    	//deleteByValue
+    	List1.deleteByValue(98);
+    	List1.deleteByValue(54);
+    	List1.printAll();
 	
 	return 0;
 } 
