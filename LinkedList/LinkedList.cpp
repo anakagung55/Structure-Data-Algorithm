@@ -33,21 +33,27 @@ void LinkedList::insertAfter (int input, int after){
     Node *newNode = new Node();
     newNode->value = input;
     newNode->next = NULL;
-    
+    if (head==NULL){
+	head=tail=NULL;
+	return;
+    }
+    if (head->value=after){
+	insertToHead(input);
+	return;	
+    }
+    if (tail->value=after){
+	insertToTail(input);
+	return;
+    }
     Node *temp = head;
     while (temp != NULL) {
         if (temp->value == after) {
-            if (temp == tail) {
-                temp->next = newNode;
-                tail = newNode;
-            } else {
                 newNode->next = temp->next;
                 temp->next = newNode;
             }
             break;
         }
         temp = temp->next;
-    }
 }
 //deleteFromHeadFunction
 void LinkedList::deleteFromHead(){
@@ -82,6 +88,10 @@ void LinkedList::deleteByValue(int value){
     if (head->value == value) {
         deleteFromHead();
         return;
+    }
+    if (tail->value == value){
+	deleteFromTail();
+	 return;
     }
     
     Node *temp = head;
